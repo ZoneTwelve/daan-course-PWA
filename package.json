@@ -1,0 +1,29 @@
+{
+  "name": "daan-course-application",
+  "version": "0.0.1",
+  "description": "大安高工班級課表查詢服務",
+  "main": "app.js",
+  "scripts": {
+    "start": "node www",
+    "test": "echo \"Error: no test specified\"&&exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "not yet\t"
+  },
+  "author": "ZoneTwelve",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "iconv-lite": "^0.4.24",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0",
+    "static-favicon": "^2.0.0-alpha",
+    "urlencode": "^1.1.0"
+  }
+}

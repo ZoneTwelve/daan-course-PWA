@@ -1,0 +1,122 @@
+body{
+  text-align:center;
+  margin:0px auto;
+  width:100%;
+  font-family:Microsoft JhengHei;
+}
+
+#course{
+  width:100%;
+  text-align: center;
+}
+/* .toolbar>button{
+  text-align: center;
+  text-align-last:center;
+  border:0.5px solid #aaaaaa;
+  font-size:18px;
+  height:36px;
+  background: transparent;
+} */
+.toolbar>select, .toolbar>button{
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  height:36px;
+  width:auto;
+  margin:5px 0px;
+  text-align: center;
+  text-align-last:center;
+  border:0.5px solid #aaaaaa;
+  /* box-shadow: 0.5px 0.5px #aaaaaa; */
+}
+
+.bottom-tools{
+  display: none;  
+
+}
+
+#course>table{
+  border-collapse:separate;
+  border-spacing: 3px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#course>table>thead>tr{
+  background:#ea7500;
+  color:white;
+}
+
+.row:nth-child(even){
+  background: #EFEFEF;
+}
+.row:nth-child(odd){
+  background: #FDFDFD;
+}
+
+.table-cell:not(.time){
+  word-break: break-all;
+  vertical-align:middle;
+  text-align:center;
+  width:100px;
+  height: 40px;
+  font-size:14px;
+  padding: 0px;
+  transition-duration:0.5s;
+}
+.row:hover>td.table-cell.time{
+  background: #00a600;
+}
+td.table-cell:hover:not(.time){
+  background: #cccccc;
+}
+#course>table>thead{
+  font-size: 24px;
+}
+.time{
+  width:auto;
+  padding:0px 10px;
+  background:#73bf00;
+  color:white;
+}
+
+.header{
+  width:100%;
+  background:rgb(38,38,38);
+  color:white;
+  font-size:30px;
+  line-height:60px;
+  /* padding-left:15px; */
+  margin: 0px;
+}
+.navbar>.tools{
+  height: 60px;
+  color:red;
+  font-size: 48px;
+  /* background: red; */
+  position: fixed;
+  top:0px;
+  right:0px;
+}
+
+.hoverDisplay{
+  color:blue;
+  /* transition-duration:0.5s; */
+  display:none;
+}
+.table-cell:hover>.hoverDisplay{
+  display:inline
+}
+footer{
+  position: fixed;
+  bottom: 0px;
+  width:100%;
+  padding: 10px 0px;
+  color:white;
+  background:#515151;
+  
+  /* display:none; */
+}
+footer>a{
+  color:#aaaaaa;
+}

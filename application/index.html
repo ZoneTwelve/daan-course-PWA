@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Chrome, Firefox, Opera -->
+  <meta name="theme-color" content="#ea7500">
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#ea7500">
+  <meta name="apple-mobile-web-app-title" content="大安課表">
+  <title>大安高工班級課表 - ZoneTwelve</title>
+  <link rel="shortcut icon" href="/src/images/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="src/css/index.css">
+</head>
+
+<body>
+  <div id="course" class="container">
+    <div class="navbar">
+      <h1 class="header">誰的課表</h1>
+      <div class="toolbar">
+        <!-- <a href="#">menu</a> -->
+        <select>
+          <option disabled selected>請選擇班級</option>
+          <option disabled>------------------------------------------</option>
+        </select>
+        <button id="clear">清除</button>
+      </div>
+    </div>
+    <!-- <div class="toolbar">
+      <select>
+        <option disabled selected>請選擇班級</option>
+        <option disabled>------------------------------------------</option>
+      </select>
+      <! -- <input type="button" value="更新" onclick="return refresh(1);"> -- >
+    </div> -->
+    <table>
+      <thead>
+        <tr class="row">
+          <th class="table-cell time"></th>
+          <th class="table-cell week">星 期 一</th>
+          <th class="table-cell week">星 期 二</th>
+          <th class="table-cell week">星 期 三</th>
+          <th class="table-cell week">星 期 四</th>
+          <th class="table-cell week">星 期 五</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row">
+          <td class="table-cell time">1</td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+        </tr>
+        <tr class="row">
+          <td class="table-cell time">2</td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+        </tr>
+        <tr class="row">
+          <td class="table-cell time">3</td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+        </tr>
+        <tr class="row">
+          <td class="table-cell time">4</td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+        </tr>
+        <tr class="row">
+          <td class="table-cell time">5</td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+        </tr>
+        <tr class="row">
+          <td class="table-cell time">6</td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+        </tr>
+        <tr class="row">
+          <td class="table-cell time">7</td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+        </tr>
+        <tr class="row">
+          <td class="table-cell time">8</td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+          <td class="table-cell"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="bottom-tools">
+      <input type="button" id="clear" value="清除資料" style="border: none;padding:2px 5px;margin:50px;">
+    </div>
+  </div>
+  <footer>
+    develop by <a href="https://github.com/ZoneTwelve">ZoneTwelve</a>
+  </footer>
+  <script src="src/js/index.js"></script>
+</body>
+</html>
