@@ -41,8 +41,8 @@ function createList(list, selectElement){
     let opt = document.createElement("option");
     opt.value = i;
     opt.innerText = c.class;
-    if(c.class===selected.class)
-      opt.selected = true;
+    // if(c.class===selected.class)
+    //   opt.selected = true;
     selectElement.appendChild(opt);
   });
 }
@@ -166,7 +166,6 @@ function pwaOnloadEvent(){
 
 var deferredPrompt;
 window.addEventListener('beforeinstallprompt', function(event){
-  console.log('安裝視窗跳出來前 阻止它!!');
   event.preventDefault();
   deferredPrompt = event;
   Console.log(event);
