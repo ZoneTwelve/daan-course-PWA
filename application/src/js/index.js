@@ -1,8 +1,11 @@
+var deferredPrompt; //PWA variable
 var loading = false;
 var list;
 var memory = new Object();
 var selected = {link:"綜高109仁", class:"綜高二仁"};
 function setup(){
+  if(deferredPrompt)
+    deferredPrompt.prompt();
   console.info('Program start at '+Time());
   let olist = readDB('list');
   var selectElement = document.querySelector(".toolbar>select");
@@ -161,17 +164,44 @@ function pwaOnloadEvent(){
   } else {
     console.log('瀏覽器不支援 Service-worker');
   }
+  var footer = document.querySelector('footer');
+  footer.addEventListener('click', (e) => {
+    if(!deferredPrompt)
+      return console.error('建立至桌面的請求失敗');
+    // Show the prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice
+      .then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          footer.style.display = 'none';
+          console.log('User accepted the A2HS prompt');
+        } else {
+          console.log('User dismissed the A2HS prompt');
+        }
+        deferredPrompt = null;
+      });
+  });
 }
 //PWA onload event end
 
-var deferredPrompt;
 window.addEventListener('beforeinstallprompt', function(event){
   event.preventDefault();
   deferredPrompt = event;
-  Console.log(event);
+  console.log(event);
+  let installBtn = document.querySelector('footer');
+  installBtn.innerText = '安裝離線課表';
+  installBtn.onclick = function(){
+    deferredPrompt.prompt();
+  }
+  document.querySelector('footer').appendChild(installBtn);
   return false;
 });
 
+window.addEventListener('appinstalled', (evt) => {
+  document.querySelector("footer").style.display = 'none';
+  // app.logEvent('a2hs', 'installed');
+});
 
 
 //PWA part end
