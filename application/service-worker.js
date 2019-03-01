@@ -4,7 +4,9 @@ const filesToCache = [
   '/',
   '/index.html',
   '/src/css/index.css',
-	'/src/js/index.js',
+  '/src/js/index.js',
+  '/src/images/favicon.png',
+  '/src/images/favicon.ico',
 	'/api/list'
 ];
 
