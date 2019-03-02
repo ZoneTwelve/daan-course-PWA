@@ -56,7 +56,7 @@ function list(callback){
     let html = iconv.decode(new Buffer.from(d, "binary"),"Big5");
     let $ = cheerio.load(html);
     let data = [];
-    let result = $('[bgcolor="#e1ffe1"]>a');
+    let result = $('table>tbody>tr>td>a');
     for(var i=0;i<result.length;i++){
       data.push({
         class:result.eq(i).text(),
